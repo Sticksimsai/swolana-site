@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Swolana Launchpad</title>
+  <title>Click to Grow</title>
   <style>
-    body {
-      text-align: center;
-      margin-top: 50px;
+    html, body {
+      height: 100%;
+      margin: 0;
+      background-color: #f8f9fa; /* Light background for transparent PNG */
     }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
     img {
       transition: transform 0.3s ease;
       cursor: pointer;
+      max-width: 100%;
+      height: auto;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-family: sans-serif;
     }
   </style>
 </head>
 <body>
 
-<h2>Get $SWOL with Swolana. Click to get swol</h2>
+<h2>Click the Image to Make It Grow</h2>
 
 <!-- IMAGE -->
 <img src="https://absolutecinemai.b-cdn.net/New%20buy%20(8).png" id="growingImage" style="width:200px;" />
@@ -31,10 +47,11 @@
   img.addEventListener("click", () => {
     scale += 1;
     img.style.transform = `scale(${scale})`;
-    sound.currentTime = 0; // rewind to start
+    sound.currentTime = 0;
     sound.play();
   });
 </script>
 
 </body>
 </html>
+
