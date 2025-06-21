@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Click to Grow</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 50px;
+    }
+    img {
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Click the Image to Make It Grow</h2>
+
+<!-- IMAGE -->
+<img src="https://absolutecinemai.b-cdn.net/New%20buy%20(8).png" id="growingImage" style="width:200px;" />
+
+<!-- AUDIO -->
+<audio id="growSound" src="Sound.mp3"></audio>
+
+<script>
+  let scale = 1;
+  const img = document.getElementById("growingImage");
+  const sound = document.getElementById("growSound");
+
+  img.addEventListener("click", () => {
+    scale += 1;
+    img.style.transform = `scale(${scale})`;
+    sound.currentTime = 0; // rewind to start
+    sound.play();
+  });
+</script>
+
+</body>
+</html>
